@@ -1,4 +1,4 @@
-# auto-market
+# car-import-calculator
 
 A transparent calculator for vehicle import costs in Guatemala. Eliminates the "black box" of IPR, DAI, and IVA calculations.
 

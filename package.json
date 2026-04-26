@@ -1,0 +1,25 @@
+{
+  "name": "car-import-calculator",
+  "version": "0.0.0",
+  "private": true,
+  "description": "car-import-calculator monorepo (web, api, shared packages).",
+  "packageManager": "yarn@4.5.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:api": "yarn workspace @car-import-calculator/api start:dev",
+    "dev:web": "yarn workspace @car-import-calculator/web dev",
+    "build:api": "yarn workspace @car-import-calculator/api build",
+    "build:web": "yarn workspace @car-import-calculator/web build",
+    "build:shared-types": "yarn workspace @car-import-calculator/shared-types build",
+    "lint": "yarn workspaces foreach -Apt run lint",
+    "test": "yarn workspaces foreach -Apt run test",
+    "prisma:migrate": "yarn workspace @car-import-calculator/api prisma:migrate",
+    "prisma:generate": "yarn workspace @car-import-calculator/api prisma:generate"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
